@@ -1,5 +1,14 @@
 # Simualación Computación con Origami
 
+---
+
+## Team
+- Kevin García
+- Nicolas Bautista
+- Sara Romero
+
+--- 
+
 ## Overview
 Este proyecto implementa un **circuito half-adder digital** usando un modelo de cómputo "origami", donde las operaciones lógicas se realizan a través de estructuras plegadas llamadas **pleats** y **gadgets**.  
 
