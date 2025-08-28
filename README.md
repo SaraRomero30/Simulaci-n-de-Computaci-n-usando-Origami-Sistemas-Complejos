@@ -45,3 +45,89 @@ El **half-adder** se construye mediante composición de compuertas básicas:
 ```text
 sum   = (a OR b) AND NOT(a AND b)   # Implementación XOR
 carry = a AND b
+```
+
+--- 
+
+## Test Results
+Basic Gate Truth Tables
+
+NOT Gate
+| a | out |
+| - | --- |
+| 0 | 1   |
+| 1 | 0   |
+
+AND Gate
+| a | b | out |
+| - | - | --- |
+| 0 | 0 | 0   |
+| 0 | 1 | 0   |
+| 1 | 0 | 0   |
+| 1 | 1 | 1   |
+
+OR Gate
+| a | b | out |
+| - | - | --- |
+| 0 | 0 | 0   |
+| 0 | 1 | 1   |
+| 1 | 0 | 1   |
+| 1 | 1 | 1   |
+
+NAND Gate
+| a | b | out |
+| - | - | --- |
+| 0 | 0 | 1   |
+| 0 | 1 | 1   |
+| 1 | 0 | 1   |
+| 1 | 1 | 0   |
+
+XOR Implementation (Gate Composition)
+| a | b | out |
+| - | - | --- |
+| 0 | 0 | 0   |
+| 0 | 1 | 1   |
+| 1 | 0 | 1   |
+| 1 | 1 | 0   |
+
+Half-Adder Integration Test
+| a | b | sum | carry | expected | ok |
+| - | - | --- | ----- | -------- | -- |
+| 0 | 0 | 0   | 0     | 0,0      | ✓  |
+| 0 | 1 | 1   | 0     | 1,0      | ✓  |
+| 1 | 0 | 1   | 0     | 1,0      | ✓  |
+| 1 | 1 | 0   | 1     | 0,1      | ✓  |
+
+---
+
+Edge Case Handling
+La implementación maneja correctamente entradas indefinidas (None):
+
+Ejemplo: operación AND con un input indefinido
+a=None, b=True → c=None
+
+--- 
+
+## Execution and Output
+Cuando se ejecuta el programa:
+- Se corren los tests unitarios para verificar el comportamiento correcto.
+- Se generan las tablas de verdad para el half-adder.
+- Se guardan los resultados detallados en half_adder_results.json.
+
+---
+
+## Technical Details
+- Topological Sorting: La red utiliza el algoritmo de Kahn para ordenar topológicamente los gadgets y asegurar que las entradas se calculen antes de ser usadas por gadgets dependientes.
+
+- Iterative Evaluation: El circuito se evalúa iterativamente hasta que las señales se estabilizan o se alcanza un número máximo de iteraciones, soportando bucles de retroalimentación en circuitos más complejos.
+
+- Extensibility: La arquitectura permite agregar nuevos tipos de gadgets extendiendo la clase base Gadget e implementando el método evaluate().
+
+--- 
+
+## Uso
+Ejecutar la implementación directamente:
+
+```python
+python origami.py
+```
