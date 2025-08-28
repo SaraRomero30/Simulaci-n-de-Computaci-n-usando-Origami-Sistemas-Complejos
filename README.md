@@ -100,7 +100,7 @@ Half-Adder Integration Test
 
 ---
 
-Edge Case Handling
+## Edge Case Handling
 La implementación maneja correctamente entradas indefinidas (None):
 
 Ejemplo: operación AND con un input indefinido
