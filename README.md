@@ -1,0 +1,2 @@
+# Simulaci-n-de-Computaci-n-usando-Origami-Sistemas-Complejos
+Este repositorio contiene la implementación en Python de un simulador de cómputo inspirado en el origami, en el cual los pliegues (Pleats) son portadores de señales booleanas y los Gadgets representan puertas lógicas (AND, OR, NOT, NAND), incluye pruebas unitarias, manejo de señales indefinidas y un caso de integración con un medio sumador.
