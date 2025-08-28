@@ -1,0 +1,38 @@
+{
+  "00": {
+    "a": false,
+    "b": false,
+    "sum": false,
+    "carry": false,
+    "expected_sum": false,
+    "expected_carry": false,
+    "ok": true
+  },
+  "01": {
+    "a": false,
+    "b": true,
+    "sum": true,
+    "carry": false,
+    "expected_sum": true,
+    "expected_carry": false,
+    "ok": true
+  },
+  "10": {
+    "a": true,
+    "b": false,
+    "sum": true,
+    "carry": false,
+    "expected_sum": true,
+    "expected_carry": false,
+    "ok": true
+  },
+  "11": {
+    "a": true,
+    "b": true,
+    "sum": false,
+    "carry": true,
+    "expected_sum": false,
+    "expected_carry": true,
+    "ok": true
+  }
+}
